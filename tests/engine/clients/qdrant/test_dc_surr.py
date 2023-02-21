@@ -24,5 +24,5 @@ class QdrantUplload:
 
 if __name__ == '__main__':
     uploader = QdrantUplload()
-    uploader.upload(DataType.EMBEDING, 'cowa_surr', 'SandCar_2')
-    uploader.upload(DataType.GPS, 'cowa_surr_gps', 'GPS')
+    uploader.upload(DataType.EMBEDING, 'cowa_surr')
+    uploader.upload(DataType.GPS, 'cowa_surr_gps')
