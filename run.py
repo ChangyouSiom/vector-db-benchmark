@@ -17,7 +17,7 @@ app = typer.Typer()
 def run(
     engines: List[str] = typer.Option(["*"]),
     datasets: List[str] = typer.Option(["*"]),
-    host: str = "localhost",
+    host: str = "127.0.0.1",
     skip_upload: bool = False,
     skip_search: bool = False,
     exit_on_error: bool = True,

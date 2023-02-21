@@ -67,16 +67,17 @@ class BaseClient:
             self.configurator.configure(dataset)
 
             print("Experiment stage: Upload")
+            upload_params={
+                    **self.uploader.upload_params,
+                    **self.configurator.collection_params,
+                }
             upload_stats = self.uploader.upload(
                 distance=dataset.config.distance, records=reader.read_data()
             )
             self.save_upload_results(
                 dataset.config.name,
                 upload_stats,
-                upload_params={
-                    **self.uploader.upload_params,
-                    **self.configurator.collection_params,
-                },
+                upload_params
             )
 
         if not skip_search:
